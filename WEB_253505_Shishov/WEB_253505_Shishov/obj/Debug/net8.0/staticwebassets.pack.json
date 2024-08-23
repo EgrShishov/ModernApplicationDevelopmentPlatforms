@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WEB_253505_Shishov.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WEB_253505_Shishov.bundle.scp.css"
-    },
-    {
       "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WEB_253505_Shishov")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7f4639c573780a4c86f9877017a41af6fe937bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57aae6fd27af4840bb7e2984179768e65d32e22f")]
 [assembly: System.Reflection.AssemblyProductAttribute("WEB_253505_Shishov")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WEB_253505_Shishov")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

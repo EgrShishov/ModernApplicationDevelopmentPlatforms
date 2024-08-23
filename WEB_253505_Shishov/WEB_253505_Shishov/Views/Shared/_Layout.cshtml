@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css," asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css"/>
 </head>
 <body>
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
 
                 <a class="navbar-brand" href="#">Title</a>
 
@@ -68,16 +68,16 @@
     </main>
     <footer>
         <div class="container">
-            <nav class="navbar navbar-expanded-md navbar-dark bg-dark">
+            <nav class="navbar navbar-expanded-md navbar-light bg-lights">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-item nav-link" href="http://www.instagram.com">
-                        <i class="fa-brands fa-instagram fa-2x"></i>
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                     <a class="nav-item nav-link" href="http://www.vk.com">
-                        <i class="fa-brands fa-vk fa-2x"></i>
+                        <i class="fa-brands fa-vk"></i>
                     </a>
-                    <a class="nav-item nav-link" href="http://www.twitter.com">
-                        <i class="fa-brands fa-twitter fa-2x"></i>
+                    <a class="nav-item nav-link" href="http://www.x.com">
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
                 </div>
             </nav>
@@ -85,5 +85,7 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

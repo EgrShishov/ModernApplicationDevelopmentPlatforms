@@ -1,5 +1,5 @@
 header, footer {
-    background-color: rgba(var(--bs-dark-rgb));
+    background-color: rgba(var(--bs-light-rgb));
 }
 
 .nav-color {

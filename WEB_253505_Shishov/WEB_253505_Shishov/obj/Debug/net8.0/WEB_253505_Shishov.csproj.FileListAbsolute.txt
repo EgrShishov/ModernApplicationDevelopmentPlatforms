@@ -22,9 +22,7 @@ D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\staticwebassets\
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WEB_253505_Shishov.props
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WEB_253505_Shishov.props
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\staticwebassets.pack.json
-D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\scopedcss\bundle\WEB_253505_Shishov.styles.css
-D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\scopedcss\projectbundle\WEB_253505_Shishov.bundle.scp.css
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\WEB_253505_Shishov.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\refint\WEB_253505_Shishov.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\WEB_253505_Shishov.pdb

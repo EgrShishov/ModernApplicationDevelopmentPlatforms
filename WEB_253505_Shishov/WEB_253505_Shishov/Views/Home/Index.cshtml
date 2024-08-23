@@ -1,91 +1,91 @@
 ﻿@{
-    Layout = null;
     ViewBag.Title = "Index";
 }
 
 <!DOCTYPE html>
 <html>
 <head>  
+    <meta name="viewport" content="width=device-width" />
     <title>Hello World</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css," asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <main>
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <p class="fs-1 fw-bold">Лабароторная работа 1!</p>
+            <div>
+                <p class="fs-3 fw-semibold">Список</p>
+                <ol class="list-group list-group-numbered" style="list-style-type: upper-alpha;"> 
+                    <li>элемент 4 списка</li>
+                    <li>элемент 1 списка</li>
+                    <li>элемент 3 списка</li>
+                    <li>элемент 2 списка</li>
+                    <li>элемент 5 списка</li>
+                </ol>
+            </div>
 
-                <a class="navbar-brand" href="#">Title</a>
+            <hr class="mt-3 mb-3"/>
 
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Lab1</a>
-                    <a class="nav-item nav-link" href="#">Catalog</a>
-                    <a class="nav-item nav-link" href="#">Administration</a>
+            <h3 class="fs-3 fw-bold">Форма</h3>
+
+            <form method="post" class="mt-3" asp-antiforgery="true">
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkbox1" name="checkbox1" />
+                            <label class="form-check-label" for="checkbox1">
+                                Чек-бокс 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkbox2" name="checkbox2" />
+                            <label class="form-check-label" for="checkbox2">
+                                Чек-бокс 2
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
-                <a href="#" class="navbar-text ms-auto"> 00,0 руб 
-                    <i class="fa-solid fa-cart-shopping"></i> (0)
-                </a>
-
-                <div class="dropdown ms-4 nav-color">
-
-                    <button class="btn btn-secondary dropdown-toggle"
-                            type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        User@gmail.com
-                        <img src="images/default-profile-picture.png" width="30"
-                             alt="User" class="rounded nav-color" />
-                    </button>
-
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        
-                        <li>
-                            <span class="dropdown-item-text">
-                                <img src="images/default-profile-picture.png"
-                                     width="50" alt="User" class="rounded" />
-                                user@gmail.com
-                            </span>
-                        </li>
-
-                        <li><hr class="dropdown-divider"></li>
-                        
-                        <li>
-                            <form id="logoutForm" class="form-inline">
-                                <button id="logout" type="submit" class="nav-link btn btn-link text-dark">
-                                    Logout
-                                </button>
-                            </form>
-                        </li>
-
-                    </ul>
-
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio1" name="radio1" />
+                            <label class="form-check-label" for="radio1">
+                                Радио-1
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio2" name="radio2" />
+                            <label class="form-check-label" for="radio2">
+                                Радио-2
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio3" name="radio3" />
+                            <label class="form-check-label" for="radio3">
+                                Радио-3
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <main class="container">
-        <h1>Hello World!</h1>
-    </main>
-    <footer>
-        <div class="container">
-            <nav class="navbar navbar-expanded-md navbar-dark bg-dark">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-item nav-link" href="http://www.instagram.com">
-                        <i class="fa-brands fa-instagram fa-2x"></i>
-                    </a>
-                    <a class="nav-item nav-link" href="http://www.vk.com">
-                        <i class="fa-brands fa-vk fa-2x"></i>
-                    </a>
-                    <a class="nav-item nav-link" href="http://www.twitter.com">
-                        <i class="fa-brands fa-twitter fa-2x"></i>
-                    </a>
+
+                <div class="form-group-row">
+                    <label for="login" class="col-sm-2 col-form-label">Логин: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" itemid="login" name="loginfield" placeholder="Введите имя" />
+                    </div>
+                </div>                
+                
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 col-form-label">Пароль: </label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" itemid="password" name="passwordfield" placeholder="Введите пароль" />
+                    </div>
                 </div>
-            </nav>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+                <button type="submit" class="mt-3 btn btn-primary">Отправить</button>
+
+            </form>
+        </>
+    </main> 
 </body>
 </html>

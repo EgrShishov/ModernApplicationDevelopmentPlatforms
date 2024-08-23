@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mhZiz0unveGMuI2pam7Vj9fguojYiTTGZZgQQrvLGR4=",
+  "Hash": "s+Nk/kaK/hjp5S9WgokEkViqzWKMxk7Hq1YsxqoVwCc=",
   "Source": "WEB_253505_Shishov",
   "BasePath": "_content/WEB_253505_Shishov",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WEB_253505_Shishov.styles.css",
-      "SourceId": "WEB_253505_Shishov",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/WEB_253505_Shishov",
-      "RelativePath": "WEB_253505_Shishov.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WEB_253505_Shishov.styles.css"
-    },
-    {
-      "Identity": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WEB_253505_Shishov.bundle.scp.css",
-      "SourceId": "WEB_253505_Shishov",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/WEB_253505_Shishov",
-      "RelativePath": "WEB_253505_Shishov.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WEB_253505_Shishov.bundle.scp.css"
-    },
     {
       "Identity": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\css\\site.css",
       "SourceId": "WEB_253505_Shishov",

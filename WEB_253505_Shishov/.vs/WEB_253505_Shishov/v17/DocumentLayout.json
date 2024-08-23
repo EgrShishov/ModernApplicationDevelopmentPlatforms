@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "WEB_253505_Shishov\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WEB_253505_Shishov\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFoAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-23T14:50:45.534Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "WEB_253505_Shishov\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WEB_253505_Shishov\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABPAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-23T14:36:58.715Z",
               "EditorCaption": ""
@@ -68,8 +68,7 @@
               "RelativeToolTip": "WEB_253505_Shishov\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T14:30:46.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T14:30:46.03Z"
             }
           ]
         }
