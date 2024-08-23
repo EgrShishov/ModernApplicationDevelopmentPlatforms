@@ -13,53 +13,10 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-light">
 
-                <a class="navbar-brand" href="#">Title</a>
+               <partial name="_MenuPartial" />
 
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Lab1</a>
-                    <a class="nav-item nav-link" href="#">Catalog</a>
-                    <a class="nav-item nav-link" href="#">Administration</a>
-                </div>
+               <partial name="_UserInfoPartial"/>
 
-                <a href="#" class="navbar-text ms-auto">
-                    00,0 руб
-                    <i class="fa-solid fa-cart-shopping"></i> (0)
-                </a>
-
-                <div class="dropdown ms-4 nav-color">
-
-                    <button class="btn btn-secondary dropdown-toggle"
-                            type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        User@gmail.com
-                        <img src="images/default-profile-picture.png" width="30"
-                             alt="User" class="rounded nav-color" />
-                    </button>
-
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-                        <li>
-                            <span class="dropdown-item-text">
-                                <img src="images/default-profile-picture.png"
-                                     width="50" alt="User" class="rounded" />
-                                user@gmail.com
-                            </span>
-                        </li>
-
-                        <li><hr class="dropdown-divider"></li>
-
-                        <li>
-                            <form id="logoutForm" class="form-inline">
-                                <button id="logout" type="submit" class="nav-link btn btn-link text-dark">
-                                    Logout
-                                </button>
-                            </form>
-                        </li>
-
-                    </ul>
-
-                </div>
             </nav>
         </div>
     </header>

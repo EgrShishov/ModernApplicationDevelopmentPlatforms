@@ -11,15 +11,12 @@
 <body>
     <main>
         <div class="container">
-            <p class="fs-1 fw-bold">Лабароторная работа 1!</p>
+            <p class="fs-1 fw-bold">@ViewData["Message"]</p>
             <div>
                 <p class="fs-3 fw-semibold">Список</p>
                 <ol class="list-group list-group-numbered" style="list-style-type: upper-alpha;"> 
-                    <li>элемент 4 списка</li>
-                    <li>элемент 1 списка</li>
-                    <li>элемент 3 списка</li>
-                    <li>элемент 2 списка</li>
-                    <li>элемент 5 списка</li>
+                    @for(var i = 0; i <5; i++)
+                    {<li>элемент @i списка</li>}
                 </ol>
             </div>
 
@@ -28,7 +25,9 @@
             <h3 class="fs-3 fw-bold">Форма</h3>
 
             <form method="post" class="mt-3" asp-antiforgery="true">
-                <div class="form-group row">
+                <select class="mt-3 form-control" id="Model.SelectedId" name="selectDemo" asp-items="Model.ListItems">
+                </select>
+                <div class="form-group row mt-3">
                     <div class="col-sm-12">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkbox1" name="checkbox1" />
