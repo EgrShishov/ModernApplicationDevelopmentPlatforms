@@ -221,6 +221,10 @@
       "PackagePath": "staticwebassets\\images\\lego9_.jpg"
     },
     {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\noimage.jpg",
+      "PackagePath": "staticwebassets\\images\\noimage.jpg"
+    },
+    {
       "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

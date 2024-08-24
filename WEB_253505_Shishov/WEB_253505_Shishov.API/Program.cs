@@ -28,7 +28,7 @@ if (pendingMigrations.Any())
 	await context.Database.MigrateAsync();
 }
 
-await DbInitializer.SeedData(app);
+//await DbInitializer.SeedData(app);
 
 if (app.Environment.IsDevelopment())
 {

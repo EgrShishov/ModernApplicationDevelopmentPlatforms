@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ROmaaTZAXug5KCiGzn6E014OfGjY8U74oigmew2+/2U=",
+  "Hash": "qrlMSMMeC8GkjkRtluc4Hhkd082DfjknW9TzkoJLLqI=",
   "Source": "WEB_253505_Shishov",
   "BasePath": "_content/WEB_253505_Shishov",
   "Mode": "Default",
@@ -1060,6 +1060,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\lego9_.jpg"
+    },
+    {
+      "Identity": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\noimage.jpg",
+      "SourceId": "WEB_253505_Shishov",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\",
+      "BasePath": "_content/WEB_253505_Shishov",
+      "RelativePath": "images/noimage.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\noimage.jpg"
     },
     {
       "Identity": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\js\\site.js",

@@ -2,20 +2,24 @@
 using System.Text.Json;
 using WEB_253505_Shishov.Domain.Entities;
 using WEB_253505_Shishov.Domain.Models;
+using WEB_253505_Shishov.Services.FileService;
 
 namespace WEB_253505_Shishov.Services.ConstructorService;
 
 public class ApiConstructorService : IConstructorService
 {
 	private readonly IHttpClientFactory _httpClientFactory;
+	private readonly IFileService _fileService;
 	private readonly JsonSerializerOptions _serializerOptions;
 	private readonly ILogger<ApiConstructorService> _logger;
 	private readonly string _pageSize;
 	public ApiConstructorService(IConfiguration configuration, 
 								IHttpClientFactory httpClientFactory, 
+								IFileService fileService,
 								ILogger<ApiConstructorService> logger)
 	{
 		_httpClientFactory = httpClientFactory;
+		_fileService = fileService;
 		_serializerOptions = new JsonSerializerOptions
 		{
 			PropertyNamingPolicy = JsonNamingPolicy.CamelCase
@@ -26,7 +30,18 @@ public class ApiConstructorService : IConstructorService
 
 	public async Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor, IFormFile? formFile)
 	{
+		constructor.Image = "images/noimage.jpg";
+
+		if (formFile != null)
+		{
+			var imageUrl = await _fileService.SaveFileAsync(formFile);
+
+			if (!string.IsNullOrEmpty(imageUrl))
+				constructor.Image = imageUrl;
+		}
+
 		var client = _httpClientFactory.CreateClient("api");
+			
 		var uri = new Uri(client.BaseAddress.AbsoluteUri + "Constructors");
 		
 		var response = await client.PostAsJsonAsync(uri, constructor, _serializerOptions);
@@ -39,14 +54,31 @@ public class ApiConstructorService : IConstructorService
 		return await response.Content.ReadFromJsonAsync<ResponseData<Constructor>>(_serializerOptions);
 	}
 
-	public Task DeleteProductAsync(int id)
+	public async Task DeleteProductAsync(int id)
 	{
-		throw new NotImplementedException();
+		var client = _httpClientFactory.CreateClient("api");
+
+		var response = await client.DeleteAsync($"{client.BaseAddress}Constructors/{id}");
+		if (!response.IsSuccessStatusCode)
+		{
+			throw new Exception("Delete operation failed");
+		}
+		return;
 	}
 
-	public Task<ResponseData<Constructor>> GetProductByIdAsync(int id)
+	public async Task<ResponseData<Constructor>> GetProductByIdAsync(int id)
 	{
-		throw new NotImplementedException();
+		var client = _httpClientFactory.CreateClient("api");
+
+		var response = await client.GetAsync($"{client.BaseAddress}Constructors/{id}");
+		if (!response.IsSuccessStatusCode)
+		{
+			return ResponseData<Constructor>.Error($"Error: {response.StatusCode.ToString()}");
+		}
+
+		var product = await response.Content.ReadFromJsonAsync<Constructor>();
+
+		return ResponseData<Constructor>.Success(product);
 	}
 
 	public async Task<ResponseData<ProductListModel<Constructor>>> GetProductListAsync(string? categoryNormalizedName, int pageNo = 1)
@@ -91,8 +123,27 @@ public class ApiConstructorService : IConstructorService
 		return ResponseData<ProductListModel<Constructor>>.Error($"Data not fetched. Error:{response.StatusCode.ToString()}");
 	}
 
-	public Task UpdateProductAsync(int id, Constructor constructor, IFormFile? formFile)
+	public async Task UpdateProductAsync(int id, Constructor constructor, IFormFile? formFile)
 	{
-		throw new NotImplementedException();
+		var client = _httpClientFactory.CreateClient("api");
+
+		if (formFile != null)
+		{
+			try
+			{
+				await _fileService.DeleteFileAsync(constructor.Image);
+			}
+			catch (Exception ex)
+			{
+				throw;
+			}
+
+			var imageUrl = await _fileService.SaveFileAsync(formFile);
+
+			if (!string.IsNullOrEmpty(imageUrl))
+				constructor.Image = imageUrl;
+		}
+
+		// TODO var response = await client.PutAsJsonAsync<
 	}
 }

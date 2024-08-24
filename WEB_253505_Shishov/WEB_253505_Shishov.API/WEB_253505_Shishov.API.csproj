@@ -21,4 +21,8 @@
     <ProjectReference Include="..\WEB_253505_Shishov.Domain\WEB_253505_Shishov.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middleware\" />
+  </ItemGroup>
+
 </Project>

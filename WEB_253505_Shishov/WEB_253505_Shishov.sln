@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov", "WEB_2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov.Domain", "WEB_253505_Shishov.Domain\WEB_253505_Shishov.Domain.csproj", "{71F58F9E-169E-4748-9810-ADA94D9DE786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_253505_Shishov.API", "WEB_253505_Shishov.API\WEB_253505_Shishov.API.csproj", "{E3AA5B59-DE7F-44F9-9928-319A155DC679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov.API", "WEB_253505_Shishov.API\WEB_253505_Shishov.API.csproj", "{E3AA5B59-DE7F-44F9-9928-319A155DC679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
