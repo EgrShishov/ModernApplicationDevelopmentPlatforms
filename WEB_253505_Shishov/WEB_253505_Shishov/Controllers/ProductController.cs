@@ -13,6 +13,8 @@ namespace WEB_253505_Shishov.Controllers
             _categoryService = categoryService;
             _constructorService = constructorService;
         }
+
+        [Route("[controller]/{category?}")]
         public async Task<IActionResult> Index(string? category, int pageNo = 1)
         {
             var productResponse =

@@ -15,7 +15,7 @@ public class ConstructorsController : ControllerBase
     }
 
     [HttpGet]
-    [Route("{category}")]
+    [Route("{category?}")]
     public async Task<IActionResult> GetConstructors(string? category, int pageNo = 1,int pageSize = 3)
     {
 			return Ok(await _constructorService.GetProductListAsync(

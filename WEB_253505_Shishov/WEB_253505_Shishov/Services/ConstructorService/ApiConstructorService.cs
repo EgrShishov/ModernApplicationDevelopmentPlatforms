@@ -53,19 +53,19 @@ public class ApiConstructorService : IConstructorService
 	{
 		var client = _httpClientFactory.CreateClient("api");
 
-		var urlString = new StringBuilder($"{client.BaseAddress.AbsoluteUri}Constructors/");
+		var urlString = new StringBuilder($"{client.BaseAddress.AbsoluteUri}Constructors");
 
 		if (categoryNormalizedName != null)
 		{
-			urlString.Append($"{categoryNormalizedName}/");
+			urlString.Append($"/{categoryNormalizedName}/");
 		}
 		if (pageNo >= 1) 
 		{
-			urlString.Append($"pageNo={pageNo}");
+			urlString.Append($"?pageNo={pageNo}");
 		}
 		if (!_pageSize.Equals("3"))
 		{
-			urlString.Append(QueryString.Create("pageSize", _pageSize));
+			urlString.Append(QueryString.Create("&pageSize", _pageSize));
 		}
 
 		var response = await client.GetAsync(new Uri(urlString.ToString()));

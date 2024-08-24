@@ -9,6 +9,8 @@
 
 	string? category = request.RouteValues["category"]?.ToString();
 
+	Console.WriteLine(category);
+
 	int prev = Model.CurrentPage == 1 ? 1 : Model.CurrentPage - 1;
 	int next = Model.CurrentPage == Model.TotalPages ? Model.TotalPages : Model.CurrentPage + 1;
 }
@@ -80,7 +82,7 @@
 				   asp-controller="Product"
 				   asp-action="Index"
 				   asp-route-category="@category"
-				   asp-route-pageNo="@prev - 1"
+				   asp-route-pageNo="@prev"
 				   aria-label="Previous">
 					Предыдущая
 				</a>
