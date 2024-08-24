@@ -28,3 +28,7 @@ D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\refint\WEB_25350
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\WEB_253505_Shishov.pdb
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\WEB_253505_Shishov.genruntimeconfig.cache
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\ref\WEB_253505_Shishov.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\WEB_253505_Shishov.Domain.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\WEB_253505_Shishov.Domain.pdb
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\WEB_253505_Shishov.csproj.AssemblyReference.cache
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\obj\Debug\net8.0\WEB_2535.052EA1A4.Up2Date

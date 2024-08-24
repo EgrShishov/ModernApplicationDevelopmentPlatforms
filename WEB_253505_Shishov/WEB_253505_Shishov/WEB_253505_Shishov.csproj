@@ -10,4 +10,8 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WEB_253505_Shishov.Domain\WEB_253505_Shishov.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

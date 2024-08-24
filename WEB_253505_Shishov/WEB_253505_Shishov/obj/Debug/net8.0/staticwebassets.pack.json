@@ -181,6 +181,46 @@
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego1.jpg",
+      "PackagePath": "staticwebassets\\images\\lego1.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego10.jpg",
+      "PackagePath": "staticwebassets\\images\\lego10.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego2.png",
+      "PackagePath": "staticwebassets\\images\\lego2.png"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego3.jpg",
+      "PackagePath": "staticwebassets\\images\\lego3.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego4.jpg",
+      "PackagePath": "staticwebassets\\images\\lego4.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego5.jpg",
+      "PackagePath": "staticwebassets\\images\\lego5.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego6.jpg",
+      "PackagePath": "staticwebassets\\images\\lego6.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego7.jpeg",
+      "PackagePath": "staticwebassets\\images\\lego7.jpeg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego8.jpg",
+      "PackagePath": "staticwebassets\\images\\lego8.jpg"
+    },
+    {
+      "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\images\\lego9_.jpg",
+      "PackagePath": "staticwebassets\\images\\lego9_.jpg"
+    },
+    {
       "Id": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

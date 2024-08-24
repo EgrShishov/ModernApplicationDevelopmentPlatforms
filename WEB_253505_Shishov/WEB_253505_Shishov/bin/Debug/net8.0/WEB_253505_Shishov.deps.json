@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "WEB_253505_Shishov/1.0.0": {
+        "dependencies": {
+          "WEB_253505_Shishov.Domain": "1.0.0"
+        },
         "runtime": {
           "WEB_253505_Shishov.dll": {}
+        }
+      },
+      "WEB_253505_Shishov.Domain/1.0.0": {
+        "runtime": {
+          "WEB_253505_Shishov.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "WEB_253505_Shishov/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WEB_253505_Shishov.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
