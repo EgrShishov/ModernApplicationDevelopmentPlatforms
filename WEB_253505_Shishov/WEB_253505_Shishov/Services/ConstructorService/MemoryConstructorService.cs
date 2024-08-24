@@ -50,7 +50,7 @@ public class MemoryConstructorService : IConstructorService
 
 		var pagedItems = new ProductListModel<Constructor>
 		{
-			Items = items.Skip((totalPages - pageNo) - 1).Take(itemsPerPage).ToList(),
+			Items = items.Skip((pageNo - 1) * itemsPerPage).Take(itemsPerPage).ToList(),
 			CurrentPage = pageNo,
 			TotalPages = totalPages
 		};
