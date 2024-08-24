@@ -13,19 +13,32 @@ public class ConstructorService : IConstructorService
 	{
 		_context = context;
 	}
-	public Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor, IFormFile? formFile)
+	public async Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor, IFormFile? formFile)
 	{
-		throw new NotImplementedException();
+		var newProduct = await _context.Constructors.AddAsync(constructor);
+
+		return ResponseData<Constructor>.Success(newProduct.Entity);
 	}
 
-	public Task DeleteProductAsync(int id)
+	public async Task DeleteProductAsync(int id)
 	{
-		throw new NotImplementedException();
+		var product = await _context.Constructors.FirstOrDefaultAsync(c => c.Id == id);
+		if (product is null)
+		{
+			return;
+		}
+
+		_context.Entry(product).State = EntityState.Deleted;
 	}
 
-	public Task<ResponseData<Constructor>> GetProductByIdAsync(int id)
+	public async Task<ResponseData<Constructor>> GetProductByIdAsync(int id)
 	{
-		throw new NotImplementedException();
+		var product = await _context.Constructors.FirstOrDefaultAsync(c => c.Id == id);
+		if (product is null)
+		{
+			return ResponseData<Constructor>.Error($"No such object with id : {id}");
+		}
+		return ResponseData<Constructor>.Success(product);
 	}
 
 	public async Task<ResponseData<ProductListModel<Constructor>>> GetProductListAsync(
@@ -48,7 +61,7 @@ public class ConstructorService : IConstructorService
 			return ResponseData<ProductListModel<Constructor>>.Success(dataList);
 		}
 
-		int totalPages = (int)Math.Ceiling((double)count / pageSize);
+		int totalPages = (int)Math.Ceiling(count / (double)pageSize);
 
 		if (pageNo > totalPages)
 		{
@@ -72,8 +85,19 @@ public class ConstructorService : IConstructorService
 		throw new NotImplementedException();
 	}
 
-	public Task UpdateProductAsync(int id, Constructor constructor, IFormFile? formFile)
+	public async Task UpdateProductAsync(int id, Constructor constructor, IFormFile? formFile)
 	{
-		throw new NotImplementedException();
+		var product = await _context.Constructors.FirstOrDefaultAsync(c => c.Id == id);
+		if (product is null)
+			return;
+
+		product.Price = constructor.Price;
+		product.Description = constructor.Description;
+		product.Category = constructor.Category;
+		product.CategoryId = constructor.CategoryId;
+		product.Picies = constructor.Picies;
+		product.Image = constructor.Image;
+
+		_context.Entry(product).State = EntityState.Modified;
 	}
 }

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\WebC#\\WEB_253505_Shishov\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.api\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|solutionrelative:web_253505_shishov.api\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|solutionrelative:web_253505_shishov.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.api\\controllers\\constructorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|solutionrelative:web_253505_shishov.api\\controllers\\constructorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3AA5B59-DE7F-44F9-9928-319A155DC679}|WEB_253505_Shishov.API\\WEB_253505_Shishov.API.csproj|solutionrelative:web_253505_shishov.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57829520-8195-4A0C-8E85-2B87C036B5DC}|WEB_253505_Shishov\\WEB_253505_Shishov.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov\\services\\constructorservice\\apiconstructorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57829520-8195-4A0C-8E85-2B87C036B5DC}|WEB_253505_Shishov\\WEB_253505_Shishov.csproj|solutionrelative:web_253505_shishov\\services\\constructorservice\\apiconstructorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57829520-8195-4A0C-8E85-2B87C036B5DC}|WEB_253505_Shishov\\WEB_253505_Shishov.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57829520-8195-4A0C-8E85-2B87C036B5DC}|WEB_253505_Shishov\\WEB_253505_Shishov.csproj|solutionrelative:web_253505_shishov\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57829520-8195-4A0C-8E85-2B87C036B5DC}|WEB_253505_Shishov\\WEB_253505_Shishov.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57829520-8195-4A0C-8E85-2B87C036B5DC}|WEB_253505_Shishov\\WEB_253505_Shishov.csproj|solutionrelative:web_253505_shishov\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,53 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Data\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.API\\Data\\DbInitializer.cs",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Data\\DbInitializer.cs",
-              "RelativeToolTip": "WEB_253505_Shishov.API\\Data\\DbInitializer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T11:32:11.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ConstructorsController.cs",
               "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Controllers\\ConstructorsController.cs",
               "RelativeDocumentMoniker": "WEB_253505_Shishov.API\\Controllers\\ConstructorsController.cs",
               "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Controllers\\ConstructorsController.cs",
               "RelativeToolTip": "WEB_253505_Shishov.API\\Controllers\\ConstructorsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T11:29:41.181Z",
+              "WhenOpened": "2024-08-24T13:24:09.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "WEB_253505_Shishov\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "WEB_253505_Shishov\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBwAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T13:14:24.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.API\\Controllers\\CategoriesController.cs",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "WEB_253505_Shishov.API\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAApAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Program.cs",
+              "RelativeDocumentMoniker": "WEB_253505_Shishov\\Program.cs",
+              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Program.cs",
+              "RelativeToolTip": "WEB_253505_Shishov\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwBMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T11:29:01.942Z",
+              "WhenOpened": "2024-08-24T13:12:44.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Program.cs",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.API\\Program.cs",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.API\\Program.cs",
-              "RelativeToolTip": "WEB_253505_Shishov.API\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAiAAAA",
+              "Title": "ApiConstructorService.cs",
+              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Services\\ConstructorService\\ApiConstructorService.cs",
+              "RelativeDocumentMoniker": "WEB_253505_Shishov\\Services\\ConstructorService\\ApiConstructorService.cs",
+              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov\\Services\\ConstructorService\\ApiConstructorService.cs",
+              "RelativeToolTip": "WEB_253505_Shishov\\Services\\ConstructorService\\ApiConstructorService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD0AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T11:10:10.214Z",
+              "WhenOpened": "2024-08-24T12:28:40.283Z",
               "EditorCaption": ""
             }
           ]
