@@ -1,4 +1,39 @@
-﻿@page
+﻿@page "{id:int?}"
 @model WEB_253505_Shishov.Areas.Admin.Pages.DetailsModel
 @{
+	ViewData["Title"] = "Edit";
 }
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<p class="fs-2 fw-bold">Details</p>
+			<p class="fs-4 fw-bold">Constructor</p>
+			<hr />
+			<form method="post" enctype="multipart/form-data">
+				<input type="hidden" asp-for="Constructor.Id" />
+				<div class="form-group">
+					<label for="description">Description</label>
+					<label for="description">@Model.Constructor.Description</label>
+				</div>
+				<div class="form-group">
+					<label for="price">Price</label>
+					<label for="price">@Model.Constructor.Price</label>
+				</div>
+				<div class="form-group">
+					<label for="picies">Amount of picies in set</label>
+					<label for="picies">@Model.Constructor.Picies</label>
+				</div>
+				<div class="form-group">
+					<label for="picker">Category</label>
+					<label for="picker">@Model.CategoryName</label>
+				</div>
+				<div class="form-group">
+					<img src="@Model.Constructor.Image"/>
+				</div>
+				<a asp-controller="Product" asp-action="Index">Back to list</a>
+			</form>
+		</div>
+	</div>
+</div>
+

@@ -18,7 +18,7 @@ public class ConstructorsController : ControllerBase
     [Route("{category?}")]
     public async Task<IActionResult> GetConstructors(string? category, int pageNo = 1,int pageSize = 3)
     {
-			return Ok(await _constructorService.GetProductListAsync(
+		return Ok(await _constructorService.GetProductListAsync(
                                         category,
                                         pageNo,
                                         pageSize));
@@ -27,13 +27,27 @@ public class ConstructorsController : ControllerBase
     [HttpGet("{id:int}")]
     public async Task<IActionResult> Details(int? id)
     {
-        throw new NotImplementedException();
+        var data = await _constructorService.GetProductByIdAsync(id.Value);
+
+        if (!data.Successfull)
+        {
+            return Problem(data.ErrorMessage);
+        }
+
+        return Ok(data.Data);
     }
 
     [HttpPost]
-    public IActionResult Create()
+    public async Task<IActionResult> Create(Domain.Entities.Constructor constructor)
     {
-			throw new NotImplementedException();
+        var response = await _constructorService.CreateProductAsync(constructor);
+
+        if (!response.Successfull)
+        {
+            return Problem(response.ErrorMessage);
+        }
+
+        return Ok(response.Data);
 	}
 
     [HttpPut("{id:int}")]
@@ -45,6 +59,7 @@ public class ConstructorsController : ControllerBase
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int? id)
     {
-			throw new NotImplementedException();
+        await _constructorService.DeleteProductAsync(id.Value);
+        return NoContent();
 	}
 }

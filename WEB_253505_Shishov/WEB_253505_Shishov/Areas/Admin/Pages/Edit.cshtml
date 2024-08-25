@@ -1,9 +1,46 @@
-﻿@page
+﻿@page "{id:int?}"
 @model WEB_253505_Shishov.Areas.Admin.Pages.EditModel
 @{
+	ViewData["Title"] = "Edit";
 }
 <div class="container">
-	<form method="post" enctype="multipart/form-data">
-
-	</form>
+	<div class="row">
+		<div class="col-md-4">
+			<p class="fs-2 fw-bold">Edit</p>
+			<p class="fs-4 fw-bold">Constructor</p>
+			<hr />
+			<form method="post" enctype="multipart/form-data">
+				<input type="hidden" asp-for="Constructor.Id" />
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description" value="@Model.Constructor.Description">
+				</div>
+				<div class="form-group">
+					<label for="price">Price</label>
+					<input type="text" class="form-control" id="price" aria-describedby="price" placeholder="Enter price" value="@Model.Constructor.Price">
+				</div>
+				<div class="form-group">
+					<label for="picies">Amount of picies in set</label>
+					<input type="text" class="form-control" id="picies" aria-describedby="picies" placeholder="Enter amount of bricks" value="@Model.Constructor.Picies">
+				</div>
+				<div class="form-group">
+					<label for="picker">Select category</label>
+					<select class="form-control" id="picker" asp-for="@Model.Constructor.CategoryId" asp-items="@Model.Categories">
+					</select>
+				</div>
+				<div class="form-group">
+					@if (!string.IsNullOrEmpty(Model.CurrentImage))
+					{
+						<div class="form-group">
+							<img src="@Model.CurrentImage" />
+						</div>
+					}
+					<label for="filepicker">Pick a new photo</label>
+					<input asp-for="@Model.Image" type="file" class="form-control-file" id="filepicker">
+				</div>
+				<button type="submit" class="btn btn-primary">Confirm editing</button>
+				<a asp-controller="Product" asp-action="Index">Back to list</a>
+			</form>
+		</div>
+	</div>
 </div>

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WEB_253505_Shishov.Domain.Entities;
 using WEB_253505_Shishov.Services.CategoryService;
 using WEB_253505_Shishov.Services.ConstructorService;
@@ -16,12 +17,12 @@ public class CreateModel : PageModel
         _constructorService = constructorService;
 		_categoryService = categoryService;
 
-		Categories = _categoryService.GetCategoryListAsync().Result.Data;
+		Categories = new SelectList(_categoryService.GetCategoryListAsync().Result.Data, "Id", "Name");
     }
-    public void OnGet()
+    public async Task<IActionResult> OnGetAsync()
     {
-
-    }
+		return Page();
+	}
 
 	[BindProperty]
 	public IFormFile? Image { get; set; }
@@ -29,8 +30,7 @@ public class CreateModel : PageModel
 	[BindProperty]
 	public Constructor Constructor { get; set; } = default!;
 
-	[BindProperty]
-	public List<Category> Categories { get; set; } = new();
+	public SelectList Categories { get; set; } 
 	public async Task<IActionResult> OnPostAsync()
 	{
 		if (!ModelState.IsValid)

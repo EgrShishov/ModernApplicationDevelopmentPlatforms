@@ -13,10 +13,10 @@ public class ConstructorService : IConstructorService
 	{
 		_context = context;
 	}
-	public async Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor, IFormFile? formFile)
+	public async Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor)
 	{
 		var newProduct = await _context.Constructors.AddAsync(constructor);
-
+		await _context.SaveChangesAsync();
 		return ResponseData<Constructor>.Success(newProduct.Entity);
 	}
 
@@ -29,6 +29,7 @@ public class ConstructorService : IConstructorService
 		}
 
 		_context.Entry(product).State = EntityState.Deleted;
+		await _context.SaveChangesAsync();
 	}
 
 	public async Task<ResponseData<Constructor>> GetProductByIdAsync(int id)
@@ -99,5 +100,6 @@ public class ConstructorService : IConstructorService
 		product.Image = constructor.Image;
 
 		_context.Entry(product).State = EntityState.Modified;
+		await _context.SaveChangesAsync();
 	}
 }

@@ -10,6 +10,6 @@ public interface IConstructorService
 	public Task<ResponseData<Constructor>> GetProductByIdAsync(int id);
 	public Task UpdateProductAsync(int id, Constructor constructor, IFormFile? formFile);
 	public Task DeleteProductAsync(int id);
-	public Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor, IFormFile? formFile);
+	public Task<ResponseData<Constructor>> CreateProductAsync(Constructor constructor);
 	public Task<ResponseData<string>> SaveImageAsync(int id, IFormFile formFile);
 }

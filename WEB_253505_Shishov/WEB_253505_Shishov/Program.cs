@@ -8,6 +8,7 @@ using WEB_253505_Shishov.Services.FileService;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 builder.RegisterCustomServices();
 
 builder.Services.Configure<UriData>(builder.Configuration.GetSection("UriData"));
@@ -42,8 +43,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapRazorPages();
+
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+	name: "default",
+	pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WEB_253505_Shishov.Domain.Entities;
+using WEB_253505_Shishov.Services.CategoryService;
 using WEB_253505_Shishov.Services.ConstructorService;
 
 namespace WEB_253505_Shishov.Areas.Admin.Pages;
@@ -8,23 +10,51 @@ namespace WEB_253505_Shishov.Areas.Admin.Pages;
 public class EditModel : PageModel
 {
 	private readonly IConstructorService _constructorService;
-	public EditModel(IConstructorService constructorService)
+	private readonly ICategoryService _categoryService;
+	public EditModel(IConstructorService constructorService, ICategoryService categoryService)
 	{
 		_constructorService = constructorService;
-	}
-	public void OnGet()
-	{
+		_categoryService = categoryService;
 
+		Categories = new SelectList(_categoryService.GetCategoryListAsync().Result.Data, "Id", "Name");
+	}
+	public async Task<IActionResult> OnGetAsync(int? id)
+	{
+		if (id == null)
+		{
+			return NotFound();
+		}
+
+		var response = await _constructorService.GetProductByIdAsync(id.Value);
+
+		if (!response.Successfull)
+		{
+			return NotFound();
+		}
+
+		var categoryResponse = await _categoryService.GetCategoryListAsync();
+		
+		if (!categoryResponse.Successfull)
+		{
+			return NotFound();
+		}
+
+		Constructor = response.Data!;
+
+		CurrentImage = Constructor.Image;
+
+		return Page();
 	}
 
 	[BindProperty]
 	public IFormFile? Image { get; set; }	
 
 	[BindProperty]
-	public IFormFile? CurrentImage { get; set; }
+	public string? CurrentImage { get; set; }
 
 	[BindProperty]
 	public Constructor Constructor { get; set; } = default!;
+	public SelectList Categories { get; set; }
 
 	public async Task<IActionResult> OnPostAsync()
 	{

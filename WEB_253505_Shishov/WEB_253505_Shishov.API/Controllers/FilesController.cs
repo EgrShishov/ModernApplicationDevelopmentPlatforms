@@ -19,7 +19,7 @@ namespace WEB_253505_Shishov.API.Controllers
 			{
 				return BadRequest();
 			}
-			var filePath = Path.Combine(_imagePath, file.Name);
+			var filePath = Path.Combine(_imagePath, file.FileName);
 			var fileInfo = new FileInfo(filePath);
 			if (fileInfo.Exists)
 			{

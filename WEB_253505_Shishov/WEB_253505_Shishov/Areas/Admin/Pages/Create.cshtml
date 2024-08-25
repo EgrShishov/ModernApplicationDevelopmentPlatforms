@@ -3,36 +3,36 @@
 @{
 }
 <div class="container">
-	<p class="fs-2 fw-bold">Create</p>
-	<p class="fs-4 fw-bold">Constructor</p>
-	<hr/>
-	<form method="post" enctype="multipart/form-data">
-		<div class="form-group">
-			<label for="description">Description</label>
-			<input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description">
-		</div>		
-		<div class="form-group">
-			<label for="price">Price</label>
-			<input type="text" class="form-control" id="price" aria-describedby="price" placeholder="Enter price">
-		</div>		
-		<div class="form-group">
-			<label for="picies">Amount of picies in set</label>
-			<input type="text" class="form-control" id="picies" aria-describedby="picies" placeholder="Enter amount of bricks">
+	<div class="row">
+		<div class="col-md-4">
+			<p class="fs-2 fw-bold">Create</p>
+			<p class="fs-4 fw-bold">Constructor</p>
+			<hr />
+			<form method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input asp-for="@Model.Constructor.Description" type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description">
+				</div>
+				<div class="form-group">
+					<label for="price">Price</label>
+					<input asp-for="@Model.Constructor.Price" type="text" class="form-control" id="price" aria-describedby="price" placeholder="Enter price">
+				</div>
+				<div class="form-group">
+					<label for="picies">Amount of picies in set</label>
+					<input asp-for="@Model.Constructor.Picies" type="text" class="form-control" id="picies" aria-describedby="picies" placeholder="Enter amount of bricks">
+				</div>
+				<div class="form-group">
+					<label for="picker">Select category</label>
+					<select asp-for="@Model.Constructor.CategoryId" class="form-control" id="picker" asp-items="@Model.Categories">
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="filepicker">Pick a set photo</label>
+					<input asp-for="@Model.Image" type="file" class="form-control-file" id="filepicker">
+				</div>
+				<button type="submit" class="btn btn-primary">Create</button>
+				<a asp-controller="Product" asp-action="Index">Back to list</a>
+			</form>
 		</div>
-		<div class="form-group">
-			<label for="picker">Select category</label>
-			<select class="form-control" id="picker">
-				@foreach(var item in Model.Categories)
-				{
-					<option itemid="@item.Id">@item.Name</option>
-				}
-			</select>
-		</div>
-		<div class="form-group">
-			<label for="filepicker">Pick a set photo</label>
-			<input type="file" class="form-control-file" id="filepicker">
-		</div>
-		<button type="submit" class="btn btn-primary">Create</button>
-		<a asp-controller="Product" asp-action="Index">Back to list</a>
-	</form>
+	</div>
 </div>

@@ -30,11 +30,10 @@ public class ApiFileService : IFileService
 
 		var request = new HttpRequestMessage
 		{
-			RequestUri = new Uri($"{client.BaseAddress}"),
 			Method = HttpMethod.Post
 		};
 
-		var extension = Path.GetExtension(formFile.FileName); 
+		var extension = Path.GetExtension(formFile.FileName);
 		var newName = Path.ChangeExtension(Path.GetRandomFileName(), extension);
 
 		var content = new MultipartFormDataContent();
