@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WEB_253505_Shishov.API.Controllers
 {
 	[Route("api/[controller]")]
+	[Authorize(Policy = "admin")]
 	[ApiController]
 	public class FilesController : ControllerBase
 	{

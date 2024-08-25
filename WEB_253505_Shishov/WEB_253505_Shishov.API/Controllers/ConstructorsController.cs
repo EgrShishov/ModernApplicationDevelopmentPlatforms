@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WEB_253505_Shishov.API.Services.ConstructorService;
 
 namespace WEB_253505_Shishov.API.Controllers;
@@ -38,6 +39,7 @@ public class ConstructorsController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Policy = "admin")]
     public async Task<IActionResult> Create(Domain.Entities.Constructor constructor)
     {
         var response = await _constructorService.CreateProductAsync(constructor);
@@ -51,12 +53,14 @@ public class ConstructorsController : ControllerBase
 	}
 
     [HttpPut("{id:int}")]
+    [Authorize(Policy = "admin")]
     public async Task<IActionResult> Edit(int? id)
     {
 			throw new NotImplementedException();
 	}
 
     [HttpDelete("{id:int}")]
+    [Authorize(Policy = "admin")]
     public async Task<IActionResult> Delete(int? id)
     {
         await _constructorService.DeleteProductAsync(id.Value);

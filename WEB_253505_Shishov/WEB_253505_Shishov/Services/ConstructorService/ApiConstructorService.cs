@@ -2,6 +2,7 @@
 using System.Text.Json;
 using WEB_253505_Shishov.Domain.Entities;
 using WEB_253505_Shishov.Domain.Models;
+using WEB_253505_Shishov.Services.Authentication;
 using WEB_253505_Shishov.Services.FileService;
 
 namespace WEB_253505_Shishov.Services.ConstructorService;
@@ -9,16 +10,19 @@ namespace WEB_253505_Shishov.Services.ConstructorService;
 public class ApiConstructorService : IConstructorService
 {
 	private readonly IHttpClientFactory _httpClientFactory;
+	private readonly ITokenAccessor _tokenAccessor;
 	private readonly IFileService _fileService;
 	private readonly JsonSerializerOptions _serializerOptions;
 	private readonly ILogger<ApiConstructorService> _logger;
 	private readonly string _pageSize;
 	public ApiConstructorService(IConfiguration configuration, 
+								ITokenAccessor tokenAccessor,
 								IHttpClientFactory httpClientFactory, 
 								IFileService fileService,
 								ILogger<ApiConstructorService> logger)
 	{
 		_httpClientFactory = httpClientFactory;
+		_tokenAccessor = tokenAccessor;
 		_fileService = fileService;
 		_serializerOptions = new JsonSerializerOptions
 		{
@@ -41,7 +45,9 @@ public class ApiConstructorService : IConstructorService
 		}
 
 		var client = _httpClientFactory.CreateClient("api");
-			
+
+		await _tokenAccessor.SetAuthorizationHeaderAsync(client);
+
 		var uri = new Uri(client.BaseAddress.AbsoluteUri + "Constructors");
 		
 		var response = await client.PostAsJsonAsync(uri, constructor, _serializerOptions);
@@ -57,6 +63,8 @@ public class ApiConstructorService : IConstructorService
 	public async Task DeleteProductAsync(int id)
 	{
 		var client = _httpClientFactory.CreateClient("api");
+
+		await _tokenAccessor.SetAuthorizationHeaderAsync(client);
 
 		var response = await client.DeleteAsync($"{client.BaseAddress}Constructors/{id}");
 		if (!response.IsSuccessStatusCode)
@@ -126,6 +134,9 @@ public class ApiConstructorService : IConstructorService
 	public async Task UpdateProductAsync(int id, Constructor constructor, IFormFile? formFile)
 	{
 		var client = _httpClientFactory.CreateClient("api");
+
+		await _tokenAccessor.SetAuthorizationHeaderAsync(client);
+
 
 		if (formFile != null)
 		{

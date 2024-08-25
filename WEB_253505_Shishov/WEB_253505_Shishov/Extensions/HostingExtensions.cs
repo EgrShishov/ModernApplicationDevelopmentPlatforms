@@ -1,4 +1,5 @@
-﻿using WEB_253505_Shishov.Services.CategoryService;
+﻿using WEB_253505_Shishov.HelperClasses;
+using WEB_253505_Shishov.Services.CategoryService;
 using WEB_253505_Shishov.Services.ConstructorService;
 
 namespace WEB_253505_Shishov.Extensions;
@@ -9,5 +10,7 @@ public static class HostingExtensions
 	{
 		builder.Services.AddScoped<ICategoryService, MemoryCategoryService>()
 						.AddScoped<IConstructorService, MemoryConstructorService>();
+
+		builder.Services.Configure<KeycloakData>(builder.Configuration.GetSection("Keycloak"));
 	}
 }

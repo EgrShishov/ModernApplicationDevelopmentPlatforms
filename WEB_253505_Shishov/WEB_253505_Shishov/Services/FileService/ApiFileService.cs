@@ -1,21 +1,21 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using WEB_253505_Shishov.Services.Authentication;
 
 namespace WEB_253505_Shishov.Services.FileService;
 
 public class ApiFileService : IFileService
 {
 	private readonly IHttpClientFactory _httpClientFactory;
-	private readonly IHttpContextAccessor _httpContextAccessor;
-	private readonly HttpContext _httpContext;
-	public ApiFileService(IHttpClientFactory httpClientFactory)
+	private readonly ITokenAccessor _tokenAccessor;
+	public ApiFileService(IHttpClientFactory httpClientFactory, ITokenAccessor tokenAccessor)
 	{
 		_httpClientFactory = httpClientFactory;
-		//_httpContextAccessor = httpContextAccessor;
-		//_httpContext = _httpContextAccessor.HttpContext;
+		_tokenAccessor = tokenAccessor;
 	}
 	public async Task DeleteFileAsync(string fileName)
 	{
 		var client = _httpClientFactory.CreateClient("filesapi");
+
+		await _tokenAccessor.SetAuthorizationHeaderAsync(client);
 
 		var response = await client.DeleteAsync($"{client.BaseAddress}/{fileName}");
 		if (!response.IsSuccessStatusCode)
@@ -27,6 +27,8 @@ public class ApiFileService : IFileService
 	public async Task<string> SaveFileAsync(IFormFile formFile)
 	{
 		var client = _httpClientFactory.CreateClient("filesapi");
+
+		await _tokenAccessor.SetAuthorizationHeaderAsync(client);
 
 		var request = new HttpRequestMessage
 		{

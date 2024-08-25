@@ -1,6 +1,11 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using WEB_253505_Shishov.Extensions;
+using WEB_253505_Shishov.HelperClasses;
 using WEB_253505_Shishov.Helpers;
+using WEB_253505_Shishov.Services.Authentication;
 using WEB_253505_Shishov.Services.CategoryService;
 using WEB_253505_Shishov.Services.ConstructorService;
 using WEB_253505_Shishov.Services.FileService;
@@ -28,6 +33,34 @@ builder.Services.AddHttpClient("filesapi", client =>
     var uriData = builder.Services.BuildServiceProvider().GetRequiredService<IOptions<UriData>>().Value;
     client.BaseAddress = new Uri($"{uriData.ApiUri}Files");
 });
+
+var keyclokData = builder.Configuration.GetSection("Keycloak").Get<KeycloakData>();
+
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+})
+    .AddCookie()
+    .AddJwtBearer()
+    .AddOpenIdConnect(opt =>
+    {
+        opt.Authority = $"{keyclokData.Host}/auth/realms/{keyclokData.Realm}";
+        opt.ClientId = keyclokData.ClientId;
+        opt.ClientSecret = keyclokData.ClientSecret;
+        opt.ResponseType = OpenIdConnectResponseType.Code;
+        opt.Scope.Add("openid");
+        opt.SaveTokens = true;
+        opt.RequireHttpsMetadata = false;
+        opt.MetadataAddress = $"{keyclokData.Host}/realms/{keyclokData.Realm}/.well-known/openid-configuration";
+    });
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddHttpClient<ITokenAccessor, KeycloakTokenAccessor>();
+
+builder.Services.AddHttpClient<IAuthService, KeycloakAuthService>();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -41,6 +74,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

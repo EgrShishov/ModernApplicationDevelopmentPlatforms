@@ -230,3 +230,12 @@ D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\runtimes\win\lib
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

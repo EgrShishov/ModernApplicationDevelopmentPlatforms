@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using WEB_253505_Shishov.API.Data;
+using WEB_253505_Shishov.API.Models;
 using WEB_253505_Shishov.API.Services.CategoryService;
 using WEB_253505_Shishov.API.Services.ConstructorService;
 
@@ -14,6 +16,25 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 builder.Services.AddScoped<IConstructorService, ConstructorService>()
 				.AddScoped<ICategoryService, CategoryService>();
+
+var authService = builder.Configuration.GetSection("AuthServer").Get<AuthServerData>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+	.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opt =>
+	{
+		opt.Authority = $"{authService.Host}/realms/{authService.Realm}";
+
+		opt.MetadataAddress = $"{authService.Host}/realms/{authService.Realm}/.well-known/openid-configuration";
+
+		opt.Audience = "account";
+
+		opt.RequireHttpsMetadata = false;
+	});
+
+builder.Services.AddAuthorization(opt =>
+{
+	opt.AddPolicy("admin", p => p.RequireRole("POWER-USER"));
+});
 
 var app = builder.Build();
 
@@ -38,6 +59,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
