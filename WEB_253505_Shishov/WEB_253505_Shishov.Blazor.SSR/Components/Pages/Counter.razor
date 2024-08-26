@@ -1,0 +1,42 @@
+﻿@page "/counter/{currentCount:int?}"
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<div class="container">
+    <EditForm OnValidSubmit="HandleValidSubmit" Model="@counterModel">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <InputNumber @bind-Value="counterModel.Value" />
+    </EditForm>
+    <button class="btn btn-secondary" @onclick="SetValue">Set value</button>
+</div>
+
+@code {
+
+    CounterModel counterModel = new CounterModel();
+
+    [Parameter]
+    public int currentCount { get; set; } = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void HandleValidSubmit()
+    {
+
+    }
+
+    private void SetValue()
+    {
+        currentCount = counterModel.Value;
+    }
+}
