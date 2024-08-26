@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\WebC#\\WEB_253505_Shishov\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61D194DD-6E0F-4A1F-84B5-E1030F3A1C1C}|WEB_253505_Shishov.Blazor.SSR\\WEB_253505_Shishov.Blazor.SSR.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazor.ssr\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D194DD-6E0F-4A1F-84B5-E1030F3A1C1C}|WEB_253505_Shishov.Blazor.SSR\\WEB_253505_Shishov.Blazor.SSR.csproj|solutionrelative:web_253505_shishov.blazor.ssr\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\pages\\catalog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\pages\\catalog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D194DD-6E0F-4A1F-84B5-E1030F3A1C1C}|WEB_253505_Shishov.Blazor.SSR\\WEB_253505_Shishov.Blazor.SSR.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazor.ssr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D194DD-6E0F-4A1F-84B5-E1030F3A1C1C}|WEB_253505_Shishov.Blazor.SSR\\WEB_253505_Shishov.Blazor.SSR.csproj|solutionrelative:web_253505_shishov.blazor.ssr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,27 +39,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.Blazor.SSR\\Components\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.Blazor.SSR\\Components\\Pages\\Counter.razor",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.Blazor.SSR\\Components\\Pages\\Counter.razor",
-              "RelativeToolTip": "WEB_253505_Shishov.Blazor.SSR\\Components\\Pages\\Counter.razor",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Title": "Catalog.razor",
+              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
+              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
+              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
+              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T20:51:08.585Z",
+              "WhenOpened": "2024-08-26T21:46:55.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\wwwroot\\appsettings.json",
+              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\wwwroot\\appsettings.json",
+              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\wwwroot\\appsettings.json",
+              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\wwwroot\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-26T21:43:09.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.Blazor.SSR\\Program.cs",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.Blazor.SSR\\Program.cs",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.Blazor.SSR\\Program.cs",
-              "RelativeToolTip": "WEB_253505_Shishov.Blazor.SSR\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAaAAAA",
+              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Program.cs",
+              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\Program.cs",
+              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Program.cs",
+              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T20:47:42.116Z",
+              "WhenOpened": "2024-08-26T21:42:38.138Z",
               "EditorCaption": ""
             }
           ]
