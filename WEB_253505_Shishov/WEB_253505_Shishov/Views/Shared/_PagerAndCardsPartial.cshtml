@@ -19,16 +19,19 @@
 							<p class="card-text fs-5 fw-light">Price: @item.Price $</p>
 							<p class="card-text fs-5 fw-italic">@item.CategoryId</p>
 						</div>
-						<div class="card-footer" style="text-align:center;">
-							<a asp-controller="Cart"
-							   asp-action="Add"
-							   asp-route-id="@item.Id"
-							   asp-route-returnurl="@Model.ReturnUrl"
-							   class="btn btn-primary">
-								Добавить в корзину
-								<i class="fa-solid fa-cart-shopping"></i>
-							</a>
-						</div>
+						@if (User.Identity.IsAuthenticated)
+						{
+							<div class="card-footer" style="text-align:center;">
+								<a asp-controller="Cart"
+								   asp-action="AddItem"
+								   asp-route-id="@item.Id"
+								   asp-route-returnurl="@Model.ReturnUrl"
+								   class="btn btn-primary">
+									Добавить в корзину
+									<i class="fa-solid fa-cart-shopping"></i>
+								</a>
+							</div>
+						}
 					</div>
 				</div>
 			}

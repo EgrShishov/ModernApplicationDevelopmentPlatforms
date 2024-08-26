@@ -2,10 +2,12 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using WEB_253505_Shishov.Domain.Entities;
 using WEB_253505_Shishov.Extensions;
 using WEB_253505_Shishov.HelperClasses;
 using WEB_253505_Shishov.Helpers;
 using WEB_253505_Shishov.Services.Authentication;
+using WEB_253505_Shishov.Services.CartService;
 using WEB_253505_Shishov.Services.CategoryService;
 using WEB_253505_Shishov.Services.ConstructorService;
 using WEB_253505_Shishov.Services.FileService;
@@ -61,6 +63,12 @@ builder.Services.AddHttpClient<ITokenAccessor, KeycloakTokenAccessor>();
 
 builder.Services.AddHttpClient<IAuthService, KeycloakAuthService>();
 
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession();
+
+builder.Services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -73,6 +81,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();

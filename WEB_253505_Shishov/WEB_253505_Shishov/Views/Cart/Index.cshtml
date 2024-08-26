@@ -1,0 +1,53 @@
+﻿@{
+	ViewData["Title"] = "Cart";
+
+	var request = ViewContext.HttpContext.Request;
+	var returnUrl = request.Path + request.QueryString.ToUriComponent();
+}
+
+@model Cart
+
+<div class="container">
+	@if(Model.Items.Count > 0)
+	{
+		<table>
+			<thead>
+				<tr>
+					<th>Good</th>
+					<th>Photo</th>
+					<th>Amount</th>
+					<th>Price</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var cartItem in Model.Items)
+				{
+					<tr>
+						<td>@cartItem.Value.Item.Description</td>
+						<td><img src=@cartItem.Value.Item.Image style="max-width:200px;" /></td>
+						<td>@cartItem.Value.Amount</td>
+						<td>@(cartItem.Value.Item.Price * cartItem.Value.Amount)</td>
+						<td>
+							<form asp-action="Remove" 
+							asp-controller="Cart"
+							asp-route-id=@cartItem.Value.Item.Id 
+							asp-route-returnUrl=@returnUrl 
+							method="post">
+								<button type="submit" class="btn btn-danger">Delete</button>
+							</form>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		<br />
+		<p>Total amount: @Model.Count</p>
+		<p>Total bricks: @Model.TotalBricks</p>
+		<p>Total price: @Model.CountPrice</p>
+	}
+	else
+	{
+		<p>Empty cart</p>
+	}
+</div>

@@ -1,17 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WEB_253505_Shishov.Domain.Entities;
 
 namespace WEB_253505_Shishov.ViewComponents
 {
     public class CartViewComponent : ViewComponent
     {
-        public CartViewComponent() 
+        private readonly Cart _cart;
+        public CartViewComponent(Cart cart) 
         {
-        
+            _cart = cart;
         }
 
         public Task<IViewComponentResult> InvokeAsync()
         {
-            return Task.FromResult<IViewComponentResult>(View());
+            return Task.FromResult<IViewComponentResult>(View(_cart));
         }
     }
 }
