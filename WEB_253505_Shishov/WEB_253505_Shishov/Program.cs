@@ -2,10 +2,12 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Serilog;
 using WEB_253505_Shishov.Domain.Entities;
 using WEB_253505_Shishov.Extensions;
 using WEB_253505_Shishov.HelperClasses;
 using WEB_253505_Shishov.Helpers;
+using WEB_253505_Shishov.Middleware;
 using WEB_253505_Shishov.Services.Authentication;
 using WEB_253505_Shishov.Services.CartService;
 using WEB_253505_Shishov.Services.CategoryService;
@@ -69,6 +71,11 @@ builder.Services.AddSession();
 
 builder.Services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
 
+builder.Host.UseSerilog((context, configuration) =>
+{
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -86,10 +93,14 @@ app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseRequestLogginMiddleware();
+
 app.MapRazorPages();
 
 app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseSerilogRequestLogging();
 
 app.Run();

@@ -246,3 +246,12 @@ D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.WebPa
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.WebPages.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Serilog.Sinks.File.dll
