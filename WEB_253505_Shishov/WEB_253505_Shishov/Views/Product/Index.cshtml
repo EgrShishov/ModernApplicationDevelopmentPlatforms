@@ -9,16 +9,17 @@
 
 	string? category = request.RouteValues["category"]?.ToString();
 
-	Console.WriteLine(category);
-
 	int prev = Model.CurrentPage == 1 ? 1 : Model.CurrentPage - 1;
 	int next = Model.CurrentPage == Model.TotalPages ? Model.TotalPages : Model.CurrentPage + 1;
 }
 @model ProductListModel<Constructor>
 
 <div class="container">
+
 	<h1>Наши лидеры продаж</h1>
+
 	<div class="col-2 border-2">
+
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" 
 			type="button" 
@@ -45,71 +46,17 @@
 			</ul>
 		</div>
 	</div>
-	<div class="container mt-3" id="catalog">
-		<div class="row offset-1" id="legoContainer">
-			@foreach (var item in Model.Items)
-			{
-				<div class="com-sm-6 col-md-4 mb-4">
-					<div class="card h-100">
-						<div class="card-header text-center bg-white">
-							<img src="@item.Image" class="card-img-top" style="max-width: 200px; height: 100%" />
-						</div>
-						<div class="card-body">
-							<p class="card-title fs-3 fw-bold">@item.Description</p>
-							<p class="card-text fs-5 fw-light">@item.Picies pcs</p>
-							<p class="card-text fs-5 fw-light">Price: @item.Price $</p>
-							<p class="card-text fs-5 fw-italic">@item.CategoryId</p>
-						</div>
-						<div class="card-footer" style="text-align:center;">
-							<a asp-controller="Cart"
-							   asp-action="Add"
-							   asp-route-id="@item.Id"
-							   asp-route-returnurl="@returnUrl"
-							   class="btn btn-primary">
-								Добавить в корзину
-								<i class="fa-solid fa-cart-shopping"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			}
-		</div>
-	</div>
-	<nav aria-label="navigation">
-		<ul class="pagination">
-			<li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
-				<a class="page-link"
-				   asp-controller="Product"
-				   asp-action="Index"
-				   asp-route-category="@category"
-				   asp-route-pageNo="@prev"
-				   aria-label="Previous">
-					Предыдущая
-				</a>
-			</li>
-			@for (int i = 1; i <= Model.TotalPages; i++)
-			{
-				<li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-					<a class="page-link"
-					   asp-controller="Product"
-					   asp-action="Index"
-					   asp-route-category="@category"
-					   asp-route-pageNo="@i">
-						@i
-					</a>
-				</li>
-			}
-			</li>
-			<li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
-				<a class="page-link"
-				   asp-controller="Product"
-				   asp-action="Index"
-				   asp-route-category="@category"
-				   asp-route-pageNo="@next"
-				   aria-label="Next">
-					Следующая
-				</a>
-			</li>
-		</ul>
-	</nav>
+	
+	@{
+		await Html.RenderPartialAsync("_PagerAndCardsPartial", new
+		{
+			CurrentCategory = category,
+			ReturnUrl = returnUrl,
+			CurrentPage = Model.CurrentPage,
+			TotalPages = Model.TotalPages,
+			Products = Model.Items,
+			Admin = false
+		});
+	}
+
 </div>

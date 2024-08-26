@@ -239,3 +239,10 @@ D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.Identi
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.Mvc.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.Razor.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.Helpers.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\System.Web.WebPages.dll
+D:\WebC#\WEB_253505_Shishov\WEB_253505_Shishov\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
