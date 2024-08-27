@@ -12,6 +12,6 @@ public interface IDataService
 	int TotalPages { get; set; }
 	int CurrentPage { get; set; }
 	Category SelectedCategory { get; set; }
-	public Task GetProductListAsync(int pageNo = 1);
-	public Task GetCategoryListAsync();
+	public Task GetProductListAsync(string? categoryNormalizedName, int pageNo = 1);
+	public Task GetCategoryListAsync(int pageNo = 1);
 }

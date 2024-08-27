@@ -1,0 +1,36 @@
+﻿@inject IDataService DataService
+
+<style>
+  .rounded-custom {
+    border-radius: 15px;
+  }
+</style>
+
+@if (SelectedItem is not null)
+{
+	<div class="card rounded-custom mb-3" style="max-width: fit-content;">
+		<div class="card-header">
+			@if (!string.IsNullOrEmpty(SelectedItem.Image))
+			{
+				<img src="@SelectedItem.Image" class="card-img-top" alt="Lego Set Image" style="max-width:300px;"/>
+			}
+		</div>
+		<div class="card-body">
+			<h2>@SelectedItem.Description</h2>
+			<p>Amount of bricks: @SelectedItem.Picies</p>
+			<p>Price: @SelectedItem.Price</p>
+		</div>
+	</div>
+}
+
+
+@code {
+
+	[Parameter]
+	public Constructor SelectedItem { get; set; }
+
+	protected override void OnInitialized()
+	{
+		
+	}
+}

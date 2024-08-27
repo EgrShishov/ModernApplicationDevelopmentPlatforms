@@ -36,6 +36,16 @@ builder.Services.AddAuthorization(opt =>
 	opt.AddPolicy("admin", p => p.RequireRole("POWER-USER"));
 });
 
+builder.Services.AddCors(b =>
+{
+	b.AddPolicy("default", policy =>
+	{
+		policy.AllowAnyMethod()
+			  .AllowAnyOrigin()
+			  .AllowAnyHeader();
+	});
+});
+
 var app = builder.Build();
 
 using var scope = app.Services.CreateScope();
@@ -64,5 +74,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.UseStaticFiles();
+
+app.UseCors("default");
 
 app.Run();

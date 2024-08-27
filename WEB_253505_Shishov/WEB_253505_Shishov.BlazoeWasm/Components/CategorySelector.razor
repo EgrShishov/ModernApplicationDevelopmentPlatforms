@@ -1,0 +1,44 @@
+﻿@inject IDataService DataService
+
+<div class="dropdown mt-3 mb-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"aria-expanded="false">
+        @if (DataService.SelectedCategory is null)
+        {
+            <span>All</span>
+        }
+        else
+        {
+            <span>@DataService.SelectedCategory.Name</span>
+        }
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        @if (DataService.Categories != null && DataService.Categories.Any())
+        {
+            @foreach (var item in DataService.Categories)
+            {
+                <li>
+                    <a class="dropdown-item" href="#" @onclick="@(async () => await SelectCategory(item))">@item.Name</a>
+                </li>
+            }
+        }
+        else
+        {
+            <li><span class="dropdown-item">No categories available</span></li>
+        }
+    </div>
+</div>
+
+@code {
+    protected async override Task OnInitializedAsync()
+    {
+        DataService.DataLoaded += StateHasChanged;
+        await DataService.GetCategoryListAsync();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task SelectCategory(Category category)
+    {
+        DataService.SelectedCategory = category;
+        await DataService.GetProductListAsync(DataService.SelectedCategory.NormalizedName);
+    }
+}

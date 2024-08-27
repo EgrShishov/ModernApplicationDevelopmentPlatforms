@@ -1,8 +1,31 @@
-﻿<h3>Catalog</h3>
+﻿@page "/catalog"
+@attribute [Authorize]
+
+@using Microsoft.AspNetCore.Authorization;
+
+<PageTitle>Catalog</PageTitle>
+<CategorySelector />
+<ConstructorsList OnItemSelected="OnConstructorSelected" />
+<Pager CurrentPage="@DataService.CurrentPage" />
+<ConstructorInfo SelectedItem="SelectedItem"/>
 
 @code {
-	protected override Task OnInitializedAsync()
+	[Inject]
+	public IDataService DataService { get; set; }
+
+	[Parameter]
+	public string? Category { get; set; }
+
+	public Constructor? SelectedItem { get; set; }
+
+	protected override async Task OnInitializedAsync()
 	{
-		return base.OnInitializedAsync();
+		await DataService.GetProductListAsync(Category);
+	}
+
+	void OnConstructorSelected(int id)
+	{
+		SelectedItem = DataService.Constructors.FirstOrDefault(c => c.Id == id);
+		StateHasChanged();
 	}
 }

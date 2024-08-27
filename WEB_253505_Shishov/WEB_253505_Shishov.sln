@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov.API", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov.Tests", "WEB_253505_Shishov.Tests\WEB_253505_Shishov.Tests.csproj", "{13CAF72E-13B5-4DAB-8648-04B86B50461A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_253505_Shishov.Blazor.SSR", "WEB_253505_Shishov.Blazor.SSR\WEB_253505_Shishov.Blazor.SSR.csproj", "{61D194DD-6E0F-4A1F-84B5-E1030F3A1C1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov.Blazor.SSR", "WEB_253505_Shishov.Blazor.SSR\WEB_253505_Shishov.Blazor.SSR.csproj", "{61D194DD-6E0F-4A1F-84B5-E1030F3A1C1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_253505_Shishov.BlazoeWasm", "WEB_253505_Shishov.BlazoeWasm\WEB_253505_Shishov.BlazoeWasm.csproj", "{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_253505_Shishov.BlazoeWasm", "WEB_253505_Shishov.BlazoeWasm\WEB_253505_Shishov.BlazoeWasm.csproj", "{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
