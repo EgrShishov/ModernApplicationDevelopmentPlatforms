@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\WebC#\\WEB_253505_Shishov\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\components\\categoryselector.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\components\\categoryselector.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|d:\\webc#\\web_253505_shishov\\web_253505_shishov.blazoewasm\\pages\\catalog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2034C02F-5247-4B47-8E2F-4C14AEC36B0A}|WEB_253505_Shishov.BlazoeWasm\\WEB_253505_Shishov.BlazoeWasm.csproj|solutionrelative:web_253505_shishov.blazoewasm\\pages\\catalog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 336,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,58 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\wwwroot\\index.html",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\wwwroot\\index.html",
-              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\wwwroot\\index.html",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAADUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-27T14:32:15.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataService.cs",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Services\\DataService.cs",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\Services\\DataService.cs",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Services\\DataService.cs",
-              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\Services\\DataService.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAUwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T13:38:13.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategorySelector.razor",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Components\\CategorySelector.razor",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\Components\\CategorySelector.razor",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Components\\CategorySelector.razor",
-              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\Components\\CategorySelector.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-27T13:24:47.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Catalog.razor",
-              "DocumentMoniker": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
-              "RelativeDocumentMoniker": "WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
-              "ToolTip": "D:\\WebC#\\WEB_253505_Shishov\\WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
-              "RelativeToolTip": "WEB_253505_Shishov.BlazoeWasm\\Pages\\Catalog.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-27T11:11:15.883Z",
-              "EditorCaption": ""
             }
           ]
         }
