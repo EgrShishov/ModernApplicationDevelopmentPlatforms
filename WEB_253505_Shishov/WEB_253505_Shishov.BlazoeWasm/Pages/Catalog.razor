@@ -4,7 +4,7 @@
 @using Microsoft.AspNetCore.Authorization;
 
 <PageTitle>Catalog</PageTitle>
-<CategorySelector />
+<CategorySelector OnCategoryChanged="CategoryChanged"/>
 <ConstructorsList OnItemSelected="OnConstructorSelected" />
 <Pager CurrentPage="@DataService.CurrentPage" />
 <ConstructorInfo SelectedItem="SelectedItem"/>
@@ -26,6 +26,13 @@
 	void OnConstructorSelected(int id)
 	{
 		SelectedItem = DataService.Constructors.FirstOrDefault(c => c.Id == id);
+		StateHasChanged();
+	}
+
+	async void CategoryChanged(string normalizedName)
+	{
+		await DataService.GetProductListAsync(normalizedName);
+		DataService.CurrentPage = 1;
 		StateHasChanged();
 	}
 }

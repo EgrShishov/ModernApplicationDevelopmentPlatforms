@@ -26,31 +26,49 @@
 
 @code {
 	[Parameter]
-	public int CurrentPage { get; set; } = 1;
+	public int CurrentPage { get; set; }
+
 	[Parameter]
-	public string? Category { get; set; }
-	private int TotalPages = 0;
+	public int TotalPages { get; set; } = 1;
 
 	private bool IsFirstPage => CurrentPage == 1;
 	private bool IsLastPage => CurrentPage == TotalPages;
 
 	protected override async Task OnInitializedAsync()
 	{
-		DataService.DataLoaded += StateHasChanged;
-		await DataService.GetProductListAsync(Category, CurrentPage);
+		DataService.DataLoaded += OnDataLoaded;
+		await LoadPageDataAsync();
+	}
+
+	private async Task LoadPageDataAsync()
+	{
+		await DataService.GetProductListAsync(DataService.SelectedCategory?.NormalizedName, CurrentPage);
+		UpdatePagerState();
+	}
+
+	private void UpdatePagerState()
+	{
 		CurrentPage = DataService.CurrentPage;
 		TotalPages = DataService.TotalPages;
+		StateHasChanged();
+	}
+
+	private void OnDataLoaded()
+	{
+		UpdatePagerState();
 	}
 
 	public void Dispose()
 	{
-		DataService.DataLoaded -= StateHasChanged;
+		DataService.DataLoaded -= OnDataLoaded;
 	}
 
 	public async Task GoToPageAsync(int pageNo)
 	{
-		await DataService.GetProductListAsync(Category, pageNo);
-		CurrentPage = DataService.CurrentPage;
-		TotalPages = DataService.TotalPages;
+		if (pageNo < 1 || pageNo > TotalPages) return;
+
+		CurrentPage = pageNo;
+		await DataService.GetProductListAsync(DataService.SelectedCategory?.NormalizedName, CurrentPage);
+		UpdatePagerState();
 	}
 }

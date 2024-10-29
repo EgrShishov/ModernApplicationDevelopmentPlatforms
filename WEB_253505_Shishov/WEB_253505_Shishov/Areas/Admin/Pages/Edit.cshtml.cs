@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,6 +8,7 @@ using WEB_253505_Shishov.Services.ConstructorService;
 
 namespace WEB_253505_Shishov.Areas.Admin.Pages;
 
+[Authorize(Policy = "admin")]
 public class EditModel : PageModel
 {
 	private readonly IConstructorService _constructorService;

@@ -76,6 +76,11 @@ builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration);
 });
 
+builder.Services.AddAuthorization(opt =>
+{
+	opt.AddPolicy("admin", p => p.RequireRole("POWER-USER"));
+});
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
